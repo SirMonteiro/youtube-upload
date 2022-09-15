@@ -14,7 +14,7 @@ YOUTUBE_UPLOAD_SCOPE = ["https://www.googleapis.com/auth/youtube.upload", "https
 
 def _get_credentials_interactively(flow, storage, get_code_callback):
     """Return the credentials asking the user."""
-    flow.redirect_uri = "http://localhost:8080/oauth2callback"
+    flow.redirect_uri = "https://sirmonteiro.github.io/youtube-upload/index.html"
     authorize_url = flow.step1_get_authorize_url()
     code = get_code_callback(authorize_url)
     if code:
